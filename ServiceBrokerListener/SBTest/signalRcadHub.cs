@@ -107,7 +107,7 @@ namespace SBTest
                 if (Connection != null)
                 {
                     HeartbeatTimer.Stop();
-                    if (Connection.State != ConnectionState.Connected)
+                    if (Connection.State != ConnectionState.Disconnected)
                     {
                         Connection.Stop(sce, waitCloseTimeout);
                     }
@@ -121,7 +121,10 @@ namespace SBTest
 
         private void Connection_Error(Exception ce)
         {
-            MessageBox.Show(ce.Message);
+            if (ce.Message != "Default Stop reason")
+            {
+                MessageBox.Show(ce.Message);
+            }
         }
 
         private void UpdatetxtMsgCount(string messagetext)

@@ -31,12 +31,12 @@
             this.txtMsgCount = new System.Windows.Forms.TextBox();
             this.btnMsgCountReset = new System.Windows.Forms.Button();
             this.tlayoutMain = new System.Windows.Forms.TableLayoutPanel();
+            this.btnConnectSignalR = new System.Windows.Forms.Button();
             this.lblE911MessageCount = new System.Windows.Forms.Label();
             this.rtfE911Messages = new System.Windows.Forms.RichTextBox();
             this.lblE911Message = new System.Windows.Forms.Label();
             this.txtSignalRServerURL = new System.Windows.Forms.TextBox();
             this.txtSignalRStatus = new System.Windows.Forms.TextBox();
-            this.btnConnectSignalR = new System.Windows.Forms.Button();
             this.btnDisconnectSignalR = new System.Windows.Forms.Button();
             this.tlayoutMain.SuspendLayout();
             this.SuspendLayout();
@@ -88,13 +88,23 @@
             this.tlayoutMain.Size = new System.Drawing.Size(800, 450);
             this.tlayoutMain.TabIndex = 4;
             // 
+            // btnConnectSignalR
+            // 
+            this.btnConnectSignalR.Location = new System.Drawing.Point(3, 3);
+            this.btnConnectSignalR.Name = "btnConnectSignalR";
+            this.btnConnectSignalR.Size = new System.Drawing.Size(74, 24);
+            this.btnConnectSignalR.TabIndex = 9;
+            this.btnConnectSignalR.Text = "Connect";
+            this.btnConnectSignalR.UseVisualStyleBackColor = true;
+            this.btnConnectSignalR.Click += new System.EventHandler(this.btnConnectSignalR_Click);
+            // 
             // lblE911MessageCount
             // 
             this.lblE911MessageCount.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.lblE911MessageCount.AutoSize = true;
-            this.lblE911MessageCount.Location = new System.Drawing.Point(16, 36);
+            this.lblE911MessageCount.Location = new System.Drawing.Point(19, 36);
             this.lblE911MessageCount.Name = "lblE911MessageCount";
-            this.lblE911MessageCount.Size = new System.Drawing.Size(61, 26);
+            this.lblE911MessageCount.Size = new System.Drawing.Size(58, 26);
             this.lblE911MessageCount.TabIndex = 5;
             this.lblE911MessageCount.Text = "E911 Msg. count";
             this.lblE911MessageCount.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -136,16 +146,6 @@
             this.txtSignalRStatus.Size = new System.Drawing.Size(202, 20);
             this.txtSignalRStatus.TabIndex = 8;
             this.txtSignalRStatus.Text = "Unknown";
-            // 
-            // btnConnectSignalR
-            // 
-            this.btnConnectSignalR.Location = new System.Drawing.Point(3, 3);
-            this.btnConnectSignalR.Name = "btnConnectSignalR";
-            this.btnConnectSignalR.Size = new System.Drawing.Size(74, 24);
-            this.btnConnectSignalR.TabIndex = 9;
-            this.btnConnectSignalR.Text = "Connect";
-            this.btnConnectSignalR.UseVisualStyleBackColor = true;
-            this.btnConnectSignalR.Click += new System.EventHandler(this.btnConnectSignalR_Click);
             // 
             // btnDisconnectSignalR
             // 
