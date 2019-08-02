@@ -1,6 +1,6 @@
 ﻿namespace SBTest
 {
-    partial class Form1
+    partial class frm_e911
     {
         /// <summary>
         /// Required designer variable.

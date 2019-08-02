@@ -14,7 +14,7 @@ using Models;
 
 namespace SBTest
 {
-    public partial class Form1 : Form
+    public partial class frm_e911 : Form
     {
         #region Variables
         public static HubConnection Connection { get; set; }

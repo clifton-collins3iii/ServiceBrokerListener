@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace SBTest
 {
-    public partial class Form1 : Form
+    public partial class frm_e911 : Form
     {
         private SqlConnection sconn = new SqlConnection();
         private SqlCommand scmd = new SqlCommand();
 
-        public Form1()
+        public frm_e911()
         {
             InitializeComponent();
         }
@@ -34,10 +34,13 @@ namespace SBTest
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             StopConnection();
-            Connection.StateChanged -= Connection_StateChanged;
-            Connection.Closed -= Connection_Closed;
-            Connection.Error -= Connection_Error;
-            Connection.Dispose();
+            if (Connection != null)
+            {
+                Connection.StateChanged -= Connection_StateChanged;
+                Connection.Closed -= Connection_Closed;
+                Connection.Error -= Connection_Error;
+                Connection.Dispose();
+            }
         }
 
         private void btnDisconnectSignalR_Click(object sender, EventArgs e)
